@@ -1,10 +1,11 @@
-name: hello-worldwf
+name: workflow2
 on: push
 jobs:
-  job1:
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: step1
-        run: echo "Hello World!"
-      - name: step2
-        run: echo "Hello"
+      - name: create a  container
+        run: docker run -d --name=cont1 -p 8080:80 nginx
+      - name: access the container 
+        run: curl
+http://localhost:8080
