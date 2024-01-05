@@ -8,4 +8,3 @@ jobs:
         run: docker run -d --name=cont1 -p 8080:80 nginx
       - name: access the container 
         run: curl
-http://localhost:8080
